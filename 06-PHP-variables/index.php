@@ -13,10 +13,10 @@ $password='123456!';
     <form action="">
 
         <p><b>Ваш логин:</b><br>
-            <input type="text" value=<? echo $login; ?>>
+            <input type="text" value=<?php echo $login; ?>>
 
         <p><b>Ваш пароль:</b><br>
-            <input type="text" value=<? echo $password; ?>>
+            <input type="text" value=<?php echo $password; ?>>
 
     </form>
 </div>
