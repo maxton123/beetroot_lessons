@@ -1,7 +1,8 @@
 <?php
-$login='mkapustiuk';
-$password='123456!';
-$languages= array('Ukrainian','Russian','English');
+
+$login = 'mkapustiuk';
+$password = '123456!';
+$languages = ['Ukrainian', 'Russian', 'English'];
 ?>
 
 <!DOCTYPE html>
@@ -14,16 +15,21 @@ $languages= array('Ukrainian','Russian','English');
     <form action="">
 
         <p><b>Ваш логин:</b><br>
-            <input type="text" value="<?php echo $login; ?>">
+            <input type="text" value="<?php
+            echo $login; ?>">
 
         <p><b>Ваш пароль:</b><br>
-            <input type="text" value="<?php echo $password; ?>">
+            <input type="text" value="<?php
+            echo $password; ?>">
 
         <p><b>Выберите язык:</b><br>
             <select name="" id="">
-                <option value=""><?php echo $languages[0]; ?></option>
-                <option value=""><?php echo $languages[1]; ?></option>
-                <option value=""><?php echo $languages[2]; ?></option>
+                <option value=""><?php
+                    echo $languages[0]; ?></option>
+                <option value=""><?php
+                    echo $languages[1]; ?></option>
+                <option value=""><?php
+                    echo $languages[2]; ?></option>
             </select>
 
     </form>
