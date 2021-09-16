@@ -3,7 +3,6 @@ if (isset($_POST['login'], $_POST['pass'])) {
     $accessData = file('./passwords.txt');
     $checkLogin = false;
     foreach ($accessData as $access) {
-        //$arrayLogin = explode(' ', $access);
         list($loginAccess, $passAccess) = explode(' ', $access);
         if ((trim($loginAccess) === $_POST['login']) && (trim($passAccess) === $_POST['pass'])) {
             echo $loginAccess;
