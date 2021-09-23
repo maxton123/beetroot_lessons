@@ -1,0 +1,30 @@
+[
+  {
+    "name": "max",
+    "login": "mkapustiuk",
+    "password": "12345",
+    "mail": "mkapustiuk@gmail.com",
+    "lang": "ua"
+  },
+  {
+    "name": "viktor",
+    "login": "vpetrov",
+    "password": "12345!",
+    "mail": "mpetrov@gmail.com",
+    "lang": "ua"
+  },
+  {
+    "name": "viktor",
+    "login": "vpetrov",
+    "password": "12345!1233",
+    "mail": "mpetrov@gmail.com",
+    "lang": "ua"
+  },
+  {
+    "name": "viktor2",
+    "login": "vpetrov2",
+    "password": "12345!134233",
+    "mail": "mpetrov2@gmail.com",
+    "lang": "ua"
+  }
+]
