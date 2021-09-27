@@ -7,7 +7,7 @@ try {
     echo $e->getMessage();
 }
 session_start();
-if (!empty($_POST) || !empty($_SESSION)) {
+if (!empty($_POST)) {
     foreach ($_POST as $name => $order) {
         if (!isset($_SESSION[$name])) {
             $_SESSION[$name] = 1;
@@ -15,6 +15,8 @@ if (!empty($_POST) || !empty($_SESSION)) {
             $_SESSION[$name]++;
         }
     }
+}
+if (!empty($_SESSION)) {
     echo "Ваш заказ:<br>";
     foreach ($_SESSION as $name => $number) {
         echo "<b>" . $name . ":</b> " . $number . " единиц<br>";
