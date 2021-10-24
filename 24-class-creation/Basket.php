@@ -14,8 +14,8 @@ class Basket extends Model
     {
         $connection = $this->getConnect();
         foreach ($idGoods as $idGood) {
-            $stmt = $connection->prepare("SELECT id from basket where good_id=?");
-            $stmt->execute([(int)$idGood]);
+            $stmt = $connection->prepare("SELECT id from basket where good_id=? and user_id=?");
+            $stmt->execute([(int)$idGood,1]);
             $goodInBasket = $stmt->fetch(PDO::FETCH_ASSOC);
             if ($goodInBasket) {
                 $upd = $connection->prepare("UPDATE basket set quantity = quantity + 1 where id=?");
