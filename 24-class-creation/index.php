@@ -1,8 +1,8 @@
 <?php
 
-include_once 'Model.php';
-include_once 'Goods.php';
-include_once 'Basket.php';
+include_once 'config.php';
+use Shop\Classes\Goods;
+use Shop\Classes\Basket;
 ?>
 
 <!DOCTYPE html>

@@ -1,5 +1,5 @@
 <?php
-
+namespace Shop\Classes;
 class Model
 {
     private $connection;
@@ -12,7 +12,7 @@ class Model
     private function connect()
     {
         try {
-            $this->connection = new PDO('mysql:host=db;port=3306;dbname=beetroot', 'root', 'root');
+            $this->connection = new \PDO('mysql:host=db;port=3306;dbname=beetroot', 'root', 'root');
         } catch (Throwable $e) {
             print "Error!: {$e->getMessage()} <br/>";
         }

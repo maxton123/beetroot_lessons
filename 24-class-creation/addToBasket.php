@@ -1,7 +1,7 @@
 <?php
 
-include_once 'Model.php';
-include_once 'Basket.php';
+include_once 'config.php';
+use Shop\Classes\Basket;
 $idGoods = $_POST['checkBox'];
 $bascket= new Basket();
 $bascket->insertGoods($idGoods);
