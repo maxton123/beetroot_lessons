@@ -20,6 +20,7 @@ class WeatherController extends Controller
 
     public function showCityTemperature($city)
     {
+
         $response = Http::get(
             'https://api.openweathermap.org/data/2.5/weather?q=' . $city . '&units=metric&appid=f11d42cfa9bb9067cc875a4f98a9aae2'
         );
@@ -37,7 +38,24 @@ class WeatherController extends Controller
         return view('weatherCitySelect');
     }
 
+    public function form()
+    {
 
+
+        $city=$_GET['city'];
+        $response = Http::get(
+            'https://api.openweathermap.org/data/2.5/weather?q=' . $city . '&units=metric&appid=f11d42cfa9bb9067cc875a4f98a9aae2'
+        );
+        $townWeather = json_decode($response, true);
+        $currentTemperature = $townWeather['main']['temp'];
+        $data=[
+            'city' => $city,
+            'currentTemperature' => $currentTemperature
+        ];
+        return view('weatherCity')->with($data);
+
+
+    }
 
 
 }
